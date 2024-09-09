@@ -1,5 +1,5 @@
 import { ToastContainer } from "react-toastify";
-import { BrowserRouter, Routes, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotesPage from "./pages/NotesPage";
 import { NotesProvider } from "./context/NotesContext";
 import Login from "./components/auth/Login";
@@ -25,11 +25,11 @@ const App = () => {
               pauseOnHover
             />
             <Navbar />
-            <Switch>
+            <Routes>
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
               <Route path="/" element={<NotesPage />} />
-            </Switch>
+            </Routes>
           </BrowserRouter>
         </NotesProvider>
       </AuthProvider>
