@@ -49,6 +49,8 @@ const AuthProvider = ({ children, initialState }) => {
   }, []);
 
   const register = async (userData) => {
+    setLoading(true);
+
     try {
       const response = await fetch(`${API_BASE_URL}/auth/register`, {
         method: "POST",
@@ -75,6 +77,7 @@ const AuthProvider = ({ children, initialState }) => {
   };
 
   const login = async (loginDatad) => {
+    setLoading(true);
     try {
       const response = await fetch(`${API_BASE_URL}/auth/login`, {
         method: "POST",
