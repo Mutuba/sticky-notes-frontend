@@ -1,5 +1,5 @@
 import { ToastContainer } from "react-toastify";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import NotesPage from "./pages/NotesPage";
 import { NotesProvider } from "./context/NotesContext";
 import Login from "./components/auth/Login";
@@ -12,7 +12,7 @@ const App = () => {
     <div id="app">
       <AuthProvider>
         <NotesProvider>
-          <BrowserRouter>
+          <HashRouter>
             <ToastContainer
               position="top-right"
               autoClose={5000}
@@ -30,7 +30,7 @@ const App = () => {
               <Route path="/login" element={<Login />} />
               <Route path="/" element={<NotesPage />} />
             </Routes>
-          </BrowserRouter>
+          </HashRouter>
         </NotesProvider>
       </AuthProvider>
     </div>
