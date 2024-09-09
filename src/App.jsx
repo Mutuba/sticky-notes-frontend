@@ -25,7 +25,6 @@ const App = () => {
               pauseOnHover
             />
             <Navbar />
-
             <Routes>
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
